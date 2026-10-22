@@ -3,6 +3,14 @@
 <meta charset="utf-8" />
 <title>Cube Scene</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<!-- installable as a home-screen web app: full screen, canvas under the status bar -->
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Cube" />
+<meta name="theme-color" content="#1a1a1a" />
 <style>:root{--bg:#1a1a1a;--fg:#f3ede6;--muted:#b8aea4;--font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}html,body{touch-action:none;height:100%}body{background:var(--bg);color:var(--fg);font-family:var(--font);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;margin:0;overflow:hidden}#app{touch-action:none;width:100%;height:100%}#app canvas{display:block}#hud{pointer-events:none;position:fixed;inset:0}.tilt-bar{z-index:1;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px));padding-top:calc(16px + env(safe-area-inset-top,0px));pointer-events:none;flex-direction:column;align-items:center;gap:8px;display:flex;position:absolute;top:0;left:0;right:0}#tilt-status{color:var(--muted);text-align:center;max-width:32ch;margin:0;font-size:14px}.crosshair{background:linear-gradient(var(--fg), var(--fg)) center / 2px 100% no-repeat, linear-gradient(var(--fg), var(--fg)) center / 100% 2px no-repeat;opacity:.8;width:18px;height:18px;margin:-9px 0 0 -9px;position:absolute;top:50%;left:50%}.joystick-zone{touch-action:none;pointer-events:auto;width:50%;position:absolute;top:0;bottom:0;left:0}.joystick-base{left:calc(24px + 64px + env(safe-area-inset-left,0px));top:calc(100% - 32px - 64px - env(safe-area-inset-bottom,0px));box-sizing:border-box;opacity:.6;pointer-events:none;background:#ffffff14;border:2px solid #ffffff40;border-radius:50%;width:128px;height:128px;margin:-64px 0 0 -64px;position:absolute}.joystick-base.active{opacity:1}.joystick-knob{background:#ffffff73;border-radius:50%;width:56px;height:56px;margin:-28px 0 0 -28px;position:absolute;top:50%;left:50%}</style>
 <div id="app"></div>
 <div id="hud">
