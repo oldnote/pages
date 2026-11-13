@@ -1,5 +1,5 @@
-// Oncel service worker, build 2026-11-13T13:38:41.422Z
-const CACHE = 'oncel-2026-11-13T13:38:41.422Z';
+// Oncel service worker, build 2026-11-13T13:49:56.528Z
+const CACHE = 'oncel-2026-11-13T13:49:56.528Z';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
